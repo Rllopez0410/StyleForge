@@ -1,0 +1,22 @@
+{
+  "name": "styleforge",
+  "version": "1.0.0",
+  "description": "",
+  "mode": "development",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.common.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.9.1",
+    "eslint": "^8.56.0",
+    "sass": "^1.70.0",
+    "sass-loader": "^14.0.0",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
