@@ -4,12 +4,11 @@
     align-items: center;
 }
 
-* {
+*, ::after, ::before {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
     color: white;
-    border: 1px solid springgreen;
 }
 
 .content {
@@ -22,11 +21,37 @@
 
 header {
     display: flex;
+    
+    .icon {
+        flex: 2;
+    }
     nav {
         @include displayFlex();
+        
+        flex: 3;
         #nav-bar {
             @include displayFlex();
-            flex-direction: row;
+            gap: 20px;
+            overflow-y: visible;
+            font-size: 24px;
+            width: 500px;
+            height: 70px;
+            .tabs {
+                @include displayFlex();
+                background-color: rgb(47, 12, 135);
+                width: 250px;
+                height: 100%;
+                border-radius: 0px 0px 100px 100px;
+                box-shadow: 0px 0px 10px black;
+                transition: 500ms;
+            }
+            .tabs:hover {
+                box-shadow: 0px 0px 10px white;
+                height: 200px;
+                padding-top: 70px;
+                font-size: 32px;
+                cursor: pointer;
+            }
         }
     }
 }
