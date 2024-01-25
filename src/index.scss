@@ -16,14 +16,19 @@
     flex-direction: column;
     background-color: rgb(0, 1, 32);
     background-image: linear-gradient(rgb(0, 1, 32), rgb(36, 8, 107), rgb(47, 12, 135));
+    font-family: Georgia, 'Times New Roman', Times, serif;
     height: 100dvh;
 }
 
 header {
     display: flex;
-    
+    border: 1px solid red;
     .icon {
+        display: flex;
+        align-items: center;
+        padding-left: 2%;
         flex: 2;
+        border: 1px solid red;
     }
     nav {
         @include displayFlex();
@@ -40,8 +45,8 @@ header {
                 @include displayFlex();
                 background-color: rgb(47, 12, 135);
                 width: 250px;
-                height: 100%;
-                border-radius: 0px 0px 100px 100px;
+                height: 90px;
+                border-radius: 0px 0px 70px 70px;
                 box-shadow: 0px 0px 10px black;
                 transition: 500ms;
             }
