@@ -11,6 +11,14 @@
     color: white;
 }
 
+ul {
+    list-style: none;            
+}
+
+body {
+    height: 100dvh;
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -18,50 +26,110 @@
     background-image: linear-gradient(rgb(0, 1, 32), rgb(36, 8, 107), rgb(47, 12, 135));
     font-family: Georgia, 'Times New Roman', Times, serif;
     height: 100dvh;
-}
-
-header {
-    display: flex;
-    border: 1px solid red;
-    .icon {
+    header {
         display: flex;
-        align-items: center;
-        padding-left: 2%;
-        flex: 2;
         border: 1px solid red;
-    }
-    nav {
-        @include displayFlex();
-        
-        flex: 3;
-        #nav-bar {
+        .icon {
+            display: flex;
+            align-items: center;
+            padding-left: 2%;
+            flex: 2;
+            border: 1px solid red;
+        }
+        nav {
             @include displayFlex();
-            gap: 20px;
-            overflow-y: visible;
-            font-size: 24px;
-            width: 500px;
-            height: 70px;
-            .tabs {
+            
+            flex: 3;
+            #nav-bar {
                 @include displayFlex();
-                background-color: rgb(47, 12, 135);
-                position: relative;
-                bottom: 50px;
-                width: 250px;
-                height: 200px;
-                border-radius: 0px 0px 75px 75px;
-                box-shadow: 0px 0px 10px black;
-                padding-top: 100px;
-                transition: 450ms;
-            }
-            .tabs:hover {
-                bottom: -50px;
-                padding-top: 20px;
-                cursor: pointer;
+                gap: 20px;
+                overflow-y: visible;
+                font-size: 24px;
+                width: 500px;
+                height: 70px;
+                .tabs {
+                    @include displayFlex();
+                    background-color: rgb(47, 12, 135);
+                    position: relative;
+                    bottom: 50px;
+                    width: 250px;
+                    height: 200px;
+                    border-radius: 0px 0px 75px 75px;
+                    box-shadow: 0px 0px 10px black;
+                    padding-top: 100px;
+                    transition: 450ms;
+                }
+                .tabs:hover {
+                    bottom: -50px;
+                    padding-top: 20px;
+                    cursor: pointer;
+                }
             }
         }
     }
-}
-
-ul {
-    list-style: none;            
+    main {
+        @include displayFlex();
+        border: 1px solid red;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        .display {
+            display: flex;
+            width: 1020px;
+            height: 550px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid red;
+            box-shadow: 0px 5px 5px black;
+            .browser-window {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                .browser-top {
+                    @include displayFlex();
+                    border: 1px solid red;
+                    background-color: rgb(190, 190, 190);
+                    flex: .7;
+                    .browser-btns {
+                        display: flex;
+                        justify-content: flex-start;
+                        flex: 1;
+                        gap: 5px;
+                        padding-left: 5px;
+                        border: 1px solid red;
+                        .circles {
+                            border: 1px solid red;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 100px;
+                        }
+                        .circles:first-child {
+                            background-color: rgb(255, 68, 68);
+                        }
+                        .circles:last-child {
+                            background-color: rgb(0, 182, 0);
+                        }
+                        .circles:nth-child(0n+2) {
+                            background-color: rgb(254, 254, 24);
+                        }
+                    }
+                    .browser-search {
+                        @include displayFlex();
+                        flex: 4;
+                        border: 1px solid red;
+                        .search-bar {
+                            width: 600px;
+                            height: 35px;
+                            background-color: white;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+                .browser-display {
+                    flex: 6;
+                    background-color: rgb(255, 255, 255);
+                    border: 1px solid red;
+                }
+            }
+        }
+    }
 }
