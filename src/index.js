@@ -1,19 +1,25 @@
 import  "./index.scss";
 
-const closeNav = document.getElementById("close-btn");
-const openNav = document.getElementById("open-nav");
+const forgeBtn = document.getElementById("open-nav");
 const sideNav = document.getElementById("side-nav");
+const toolbox = document.getElementById("toolbox");
 
-closeNav.addEventListener("click", closeSideNav);
-openNav.addEventListener("click", openSideNav);
+let click = false;
 
-function closeSideNav() {
-    sideNav.style.width = "0";
-    sideNav.style.paddingLeft = "0";
+forgeBtn.addEventListener("click", attributeList);
 
-}
-
-function openSideNav() {
-    sideNav.style.width = "240px";
-    sideNav.style.paddingLeft = "10px";
+function attributeList() {
+    if (!click) {
+        sideNav.style.width = "240px";
+        sideNav.style.paddingLeft = "10px";
+        toolbox.style.left = "250px";
+        console.log("click");
+        click = true;
+    } else {
+        sideNav.style.width = "0";
+        sideNav.style.paddingLeft = "0";
+        toolbox.style.left = "30px";    
+        click = false;
+    }
+    
 }

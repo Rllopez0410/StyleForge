@@ -72,17 +72,48 @@ body {
     }
     main {
         @include displayFlex();
-        
         padding-top: 2%;
         padding-bottom: 2%;
         flex: 1;
         position: relative;
-        #open-nav {
+        #toolbox {
+            @include displayFlex();
+            flex-direction: column;
+            gap: 25px;
             position: absolute;
+            top: 0;
+            left: 30px;
             margin-top: 10px;
             margin-left: 10px;
-            top: 0;
-            left: 0;
+            transition: 0.5s;
+            .toolbox-btns {
+                @include displayFlex();
+                width: 45px;
+                height: 45px;
+                border: none;
+                outline-color: rgba(52, 4, 128, 0.637);
+                background-color: rgba(146, 79, 255, 0);
+                outline: 5px;
+                outline-style: outset;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px black;
+                transition: 0.2s;
+                #build-icon {
+                    font-size: 35px;
+                    text-shadow: 0px 0px 5px rgb(146, 79, 255);
+                }
+                #undo-build {
+                    font-size: 35px;
+                    text-shadow: 0px 0px 5px rgb(146, 79, 255);
+                }
+                #reset-build {
+                    font-size: 35px;
+                    text-shadow: 0px 0px 5px rgb(146, 79, 255);
+                }
+            }
+            .toolbox-btns:hover {
+                transform: scale(1.2);
+            }
         }
         .side-nav {
             display: flex;
@@ -98,6 +129,8 @@ body {
             padding-top: 80px;
             padding-left: 0;
             font-size: 24px;
+            box-shadow: 0px 10px 8px black;
+            border-radius: 0px 30px 30px 0px;
             .header-close {
                 display: flex;
                 align-items: center;
@@ -165,6 +198,5 @@ body {
     }
     footer {
         @include displayFlex();
-        background-color: #121212;
     }
 }

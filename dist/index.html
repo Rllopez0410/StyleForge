@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script defer src="main.js"></script>
 </head>
 <body>
@@ -21,13 +22,28 @@
             </nav>
         </header>
         <main>
-            <button id="open-nav">open</button>
+            <div id="toolbox">
+                <button id="open-nav" class="toolbox-btns">
+                    <span id="build-icon" class="material-symbols-outlined">
+                        build_circle
+                        </span>
+                </button>
+                <button class="toolbox-btns">
+                    <span id="undo-build" class="material-symbols-outlined">
+                        undo
+                        </span>
+                </button>
+                <button class="toolbox-btns">
+                    <span id="reset-build" class="material-symbols-outlined">
+                        reset_wrench
+                        </span>
+                </button>
+            </div>
             <nav class="side-nav" id="side-nav">
                 <div class="header-close">
                     <div class="side-header">
                         <h5>CSS Attributes</h5>
                     </div>
-                    <button id="close-btn">close</button>
                 </div>
                 <ul class="css-attributes">display</ul>
                 <ul class="css-attributes">justify-content</ul>
