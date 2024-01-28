@@ -12,15 +12,27 @@
             <div class="icon">
                 <h2>StyleForge</h2>
             </div>
-            <nav>
+            <nav class="head-nav">
                 <ul id="nav-bar">
                     <li class="tabs">Home</li>
-                    <li class="tabs">Displays</li>
+                    <li class="tabs">Forge</li>
                     <li class="tabs">About</li>
                 </ul>
             </nav>
         </header>
         <main>
+            <button id="open-nav">open</button>
+            <nav class="side-nav" id="side-nav">
+                <div class="header-close">
+                    <div class="side-header">
+                        <h5>CSS Attributes</h5>
+                    </div>
+                    <button id="close-btn">close</button>
+                </div>
+                <ul class="css-attributes">display</ul>
+                <ul class="css-attributes">justify-content</ul>
+                <ul class="css-attributes">align-items</ul>
+            </nav>
             <div class="display">
                 <div class="browser-window">
                     <div class="browser-top">
@@ -45,7 +57,7 @@
                 </div>
             </div>
         </main>
-        <footer></footer>
+        <footer>Footer</footer>
     </div>
 </body>
 </html>

@@ -28,17 +28,19 @@ body {
     height: 100dvh;
     header {
         display: flex;
-        border: 1px solid red;
+        
         .icon {
             display: flex;
             align-items: center;
             padding-left: 2%;
             flex: 2;
-            border: 1px solid red;
-        }
-        nav {
-            @include displayFlex();
             
+            h2 {
+                z-index: 2;
+            }
+        }
+        .head-nav {
+            @include displayFlex();
             flex: 3;
             #nav-bar {
                 @include displayFlex();
@@ -58,6 +60,7 @@ body {
                     box-shadow: 0px 0px 10px black;
                     padding-top: 100px;
                     transition: 450ms;
+                    z-index: 2;
                 }
                 .tabs:hover {
                     bottom: -50px;
@@ -69,16 +72,44 @@ body {
     }
     main {
         @include displayFlex();
-        border: 1px solid red;
+        
         padding-top: 2%;
         padding-bottom: 2%;
+        flex: 1;
+        position: relative;
+        #open-nav {
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 10px;
+            top: 0;
+            left: 0;
+        }
+        .side-nav {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #121212;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 80px;
+            padding-left: 0;
+            font-size: 24px;
+            .header-close {
+                display: flex;
+                align-items: center;
+            }
+        }
         .display {
             display: flex;
             width: 1020px;
             height: 550px;
             border-radius: 20px;
             overflow: hidden;
-            border: 1px solid red;
+            
             box-shadow: 0px 5px 5px black;
             .browser-window {
                 display: flex;
@@ -86,7 +117,7 @@ body {
                 flex: 1;
                 .browser-top {
                     @include displayFlex();
-                    border: 1px solid red;
+                    
                     background-color: rgb(190, 190, 190);
                     flex: .7;
                     .browser-btns {
@@ -95,9 +126,9 @@ body {
                         flex: 1;
                         gap: 5px;
                         padding-left: 5px;
-                        border: 1px solid red;
+                        
                         .circles {
-                            border: 1px solid red;
+                            
                             width: 20px;
                             height: 20px;
                             border-radius: 100px;
@@ -115,7 +146,7 @@ body {
                     .browser-search {
                         @include displayFlex();
                         flex: 4;
-                        border: 1px solid red;
+                        
                         .search-bar {
                             width: 600px;
                             height: 35px;
@@ -127,9 +158,13 @@ body {
                 .browser-display {
                     flex: 6;
                     background-color: rgb(255, 255, 255);
-                    border: 1px solid red;
+                    
                 }
             }
         }
+    }
+    footer {
+        @include displayFlex();
+        background-color: #121212;
     }
 }
