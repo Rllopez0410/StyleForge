@@ -28,7 +28,6 @@ body {
     height: 100dvh;
     header {
         display: flex;
-        
         .icon {
             display: flex;
             align-items: center;
@@ -97,7 +96,7 @@ body {
                 outline-style: outset;
                 border-radius: 10px;
                 box-shadow: 0px 0px 10px black;
-                transition: 0.2s;
+                transition: 0.5s;
                 #build-icon {
                     font-size: 35px;
                     text-shadow: 0px 0px 5px rgb(146, 79, 255);
@@ -142,7 +141,6 @@ body {
             height: 550px;
             border-radius: 20px;
             overflow: hidden;
-            
             box-shadow: 0px 5px 5px black;
             .browser-window {
                 display: flex;
@@ -150,7 +148,6 @@ body {
                 flex: 1;
                 .browser-top {
                     @include displayFlex();
-                    
                     background-color: rgb(190, 190, 190);
                     flex: .7;
                     .browser-btns {
@@ -161,7 +158,6 @@ body {
                         padding-left: 5px;
                         
                         .circles {
-                            
                             width: 20px;
                             height: 20px;
                             border-radius: 100px;
@@ -179,7 +175,6 @@ body {
                     .browser-search {
                         @include displayFlex();
                         flex: 4;
-                        
                         .search-bar {
                             width: 600px;
                             height: 35px;
@@ -191,7 +186,6 @@ body {
                 .browser-display {
                     flex: 6;
                     background-color: rgb(255, 255, 255);
-                    
                 }
             }
         }
