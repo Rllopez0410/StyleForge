@@ -129,9 +129,29 @@ body {
             font-size: 24px;
             box-shadow: 0px 10px 8px black;
             border-radius: 0px 30px 30px 0px;
-            .header-close {
+            .side-header {
                 display: flex;
                 align-items: center;
+                margin-bottom: 20px;
+                padding-left: 10px;
+            }
+            .css-attributes {
+                padding: 5px 0 5px 10px;
+                transition: 0.3s;
+                cursor: pointer;
+                .attribute-list {
+                    min-width: max-content;
+                    overflow: hidden;
+                    max-height: 0;
+                    padding-left: 10px;
+                    // background-color: rgb(255, 100, 100);
+                    background-color: turquoise;
+                    transition: max-height 1s;
+                }
+            }
+            .css-attributes:hover {
+                background-color: white;
+                color: black;
             }
         }
         .display {
