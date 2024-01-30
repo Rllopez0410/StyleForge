@@ -136,17 +136,29 @@ body {
                 padding-left: 10px;
             }
             .css-attributes {
-                padding: 5px 0 5px 10px;
                 transition: 0.3s;
+                z-index: 1;
                 cursor: pointer;
+                .attribute-btns {
+                    padding: 5px 0 0 0;
+                }
+                .attribute-btns:hover {
+                    color: black;
+                }
                 .attribute-list {
                     min-width: max-content;
                     overflow: hidden;
                     max-height: 0;
-                    padding-left: 10px;
-                    // background-color: rgb(255, 100, 100);
                     background-color: turquoise;
-                    transition: max-height 1s;
+                    transition: 1s;
+                    z-index: 2;
+                }
+                .display-value {
+                    padding-left: 10px;
+                }
+                .display-value:hover {
+                    background-color: white;
+                    color: black;
                 }
             }
             .css-attributes:hover {
