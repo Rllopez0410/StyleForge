@@ -10,5 +10,5 @@ export const sideNavAnimations = {
 }; 
 
 export const cssAttrDom = {
-    displayBtn: document.getElementById("display-attribute"),
+    displayBtn: document.querySelectorAll(".attribute-btns"),
 };

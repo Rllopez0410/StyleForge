@@ -2,10 +2,9 @@ import  "./index.scss";
 import { cssAttrDom, sideNavAnimations, toolboxFunc } from "./DOM";
 
 let toolboxClick = false;
-let cssAttribute = false;
 
 toolboxFunc.forgeBtn.addEventListener("click", attributeList);
-cssAttrDom.displayBtn.addEventListener("click", cssDisplay);
+cssAttrDom.displayBtn.forEach(cssDisplay);
 
 function attributeList() {
     if (!toolboxClick) {
@@ -21,17 +20,18 @@ function attributeList() {
     }   
 }
 
-function cssDisplay() {
-    if (!cssAttribute) {
-        sideNavAnimations.displayVal.style.display = "block";
-        sideNavAnimations.displayAttr.style.padding = "5px 0 0px 0px";
-        sideNavAnimations.displayVal.style.maxHeight = "200px";
-        console.log("click");
-        cssAttribute = true;
-    } else {
-        sideNavAnimations.displayVal.style.display = "block";
-        sideNavAnimations.displayAttr.style.padding = "5px 0 0px 0px";
-        sideNavAnimations.displayVal.style.maxHeight = "0";
-        cssAttribute = false;
-    }
+function cssDisplay(btn) {
+    let cssAttribute = false;
+    btn.addEventListener("click", (e) => {
+        if (!cssAttribute) {
+            cssAttribute = true;
+            e.target.parentNode.lastElementChild.style.maxHeight= "200px";
+            e.target.classList.add();
+        } else {
+            cssAttribute = false;
+            e.target.parentNode.lastElementChild.style.maxHeight= "0";
+            e.target.classList.add("attribute-btns");
+        }
+    });
 }
+
