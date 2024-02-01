@@ -4,7 +4,7 @@ import { cssAttrDom, sideNavAnimations, toolboxFunc } from "./DOM";
 let toolboxClick = false;
 
 toolboxFunc.forgeBtn.addEventListener("click", attributeList);
-cssAttrDom.displayBtn.forEach(cssDisplay);
+cssAttrDom.displayBtn.forEach(displayAttrVals);
 
 function attributeList() {
     if (!toolboxClick) {
@@ -20,7 +20,7 @@ function attributeList() {
     }   
 }
 
-function cssDisplay(btn) {
+function displayAttrVals(btn) {
     let cssAttribute = false;
     btn.addEventListener("click", (e) => {
         if (!cssAttribute) {
