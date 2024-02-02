@@ -144,6 +144,7 @@ body {
                 }
                 .attribute-btns:hover {
                     color: black;
+                    background-color: white;
                 }
                 .attribute-list {
                     min-width: max-content;
@@ -160,10 +161,6 @@ body {
                     background-color: white;
                     color: black;
                 }
-            }
-            .css-attributes:hover {
-                background-color: white;
-                color: black;
             }
         }
         .display {

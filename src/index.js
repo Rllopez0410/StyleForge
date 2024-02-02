@@ -26,12 +26,11 @@ function displayAttrVals(btn) {
         if (!cssAttribute) {
             cssAttribute = true;
             e.target.parentNode.lastElementChild.style.maxHeight= "200px";
-            e.target.classList.add();
         } else {
             cssAttribute = false;
             e.target.parentNode.lastElementChild.style.maxHeight= "0";
-            e.target.classList.add("attribute-btns");
         }
     });
 }
+
 
