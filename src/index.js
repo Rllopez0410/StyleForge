@@ -1,10 +1,11 @@
 import  "./index.scss";
-import { cssAttrDom, sideNavAnimations, toolboxFunc } from "./DOM";
+import { cssAttrDom, cssAttrVal, nodes, sideNavAnimations, toolboxFunc } from "./DOM";
 
 let toolboxClick = false;
 
 toolboxFunc.forgeBtn.addEventListener("click", attributeList);
 cssAttrDom.displayBtn.forEach(displayAttrVals);
+cssAttrVal.displayValues.forEach(displayVal);
 
 function attributeList() {
     if (!toolboxClick) {
@@ -33,4 +34,8 @@ function displayAttrVals(btn) {
     });
 }
 
-
+function displayVal(btn) {
+    btn.addEventListener("click", (e) => {
+        nodes.parentNode.style.display = e.target.id;
+    });
+}

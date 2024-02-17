@@ -184,7 +184,6 @@ body {
                         flex: 1;
                         gap: 5px;
                         padding-left: 5px;
-                        
                         .circles {
                             width: 20px;
                             height: 20px;
@@ -212,8 +211,25 @@ body {
                     }
                 }
                 .browser-display {
+                    @include displayFlex();
                     flex: 6;
                     background-color: rgb(255, 255, 255);
+                    #parent-node {
+                        width: 300px;
+                        height: 300px;
+                        background-color: rgb(254, 110, 110);
+                        border: 10px solid rgb(255, 69, 69);
+                        border-radius: 15px;
+                        .child {
+                            @include displayFlex();
+                            width: 65px;
+                            height: 65px;
+                            font-size: 12px;
+                            background-color: rgb(254, 110, 110);
+                            border: 5px solid rgb(255, 69, 69);
+                            border-radius: 15px;
+                        }
+                    }
                 }
             }
         }
