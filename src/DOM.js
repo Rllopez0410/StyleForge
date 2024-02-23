@@ -11,12 +11,15 @@ export const sideNavAnimations = {
 
 export const nodes = {
     parentNode: document.getElementById("parent-node"),
+    childHolder: document.getElementById("child-holder")
 };
 
 export const cssAttrDom = {
     displayBtn: document.querySelectorAll(".attribute-btns"),
 };
 
-export const cssAttrVal = {
+export const cssRenderVal = {
     displayValues: document.querySelectorAll(".display-value"),
+    flexDirValues: document.querySelectorAll(".flex-dir-value"),
+    jusConValues: document.querySelectorAll(".justify-con-value"),
 };

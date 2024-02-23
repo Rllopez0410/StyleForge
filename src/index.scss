@@ -100,14 +100,6 @@ body {
                     font-size: 35px;
                     text-shadow: 0px 0px 5px rgb(146, 79, 255);
                 }
-                #undo-build {
-                    font-size: 35px;
-                    text-shadow: 0px 0px 5px rgb(146, 79, 255);
-                }
-                #reset-build {
-                    font-size: 35px;
-                    text-shadow: 0px 0px 5px rgb(146, 79, 255);
-                }
             }
             .toolbox-btns:hover {
                 transform: scale(1.2);
@@ -154,10 +146,10 @@ body {
                     transition: 1s;
                     z-index: 2;
                 }
-                .display-value {
+                .attribute-list > * {
                     padding-left: 10px;
                 }
-                .display-value:hover {
+                .attribute-list > *:hover {
                     background-color: white;
                     color: black;
                 }
@@ -215,19 +207,26 @@ body {
                     flex: 6;
                     background-color: rgb(255, 255, 255);
                     #parent-node {
+                        @include displayFlex();
+                        flex-direction: column;
                         width: 300px;
                         height: 300px;
                         background-color: rgb(254, 110, 110);
                         border: 10px solid rgb(255, 69, 69);
                         border-radius: 15px;
-                        .child {
-                            @include displayFlex();
-                            width: 65px;
-                            height: 65px;
-                            font-size: 12px;
-                            background-color: rgb(254, 110, 110);
-                            border: 5px solid rgb(255, 69, 69);
-                            border-radius: 15px;
+                        #child-holder {
+                            border: 1px solid;
+                            width: 270px;
+                            height: 250px;
+                           .child {
+                                @include displayFlex();
+                                width: 65px;
+                                height: 65px;
+                                font-size: 12px;
+                                background-color: rgb(254, 110, 110);
+                                border: 5px solid rgb(255, 69, 69);
+                                border-radius: 15px;
+                            } 
                         }
                     }
                 }

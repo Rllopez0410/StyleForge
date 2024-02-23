@@ -28,16 +28,6 @@
                         build_circle
                         </span>
                 </button>
-                <button class="toolbox-btns">
-                    <span id="undo-build" class="material-symbols-outlined">
-                        undo
-                        </span>
-                </button>
-                <button class="toolbox-btns">
-                    <span id="reset-build" class="material-symbols-outlined">
-                        reset_wrench
-                        </span>
-                </button>
             </div>
             <nav class="side-nav" id="side-nav">
                 <div class="side-header">
@@ -47,19 +37,23 @@
                     <div id="display-attribute" class="attribute-btns">display</div>
                     <ul id="display-values" class="attribute-list">
                         <li id="flex" class="display-value">flex</li>
-                        <li id="grid" class="display-value">grid</li>
-                        <li id="inline" class="display-value">inline</li>
-                        <li id="block" class="display-value">block</li>
                     </ul>
                     </div>
                 <div class="css-attributes">
+                    <div id="flex-dir-attribute" class="attribute-btns">flex-direction</div>
+                    <ul id="flex-dir-values" class="attribute-list">
+                        <li id="row" class="flex-dir-value">row</li>
+                        <li id="column" class="flex-dir-value">column</li>
+                    </ul>
+                </div>    
+                <div class="css-attributes">
                     <div id="justify-attribute" class="attribute-btns">justify-content</div>
                     <ul class="attribute-list">
-                        <li class="display-value">center</li>
-                        <li class="display-value">left</li>
-                        <li class="display-value">right</li>
-                        <li class="display-value">spcae-between</li>
-                        <li class="display-value">spcae-around</li>
+                        <li id="center" class="justify-con-value">center</li>
+                        <li id="left" class="justify-con-value">left</li>
+                        <li id="right" class="justify-con-value">right</li>
+                        <li id="space-between" class="justify-con-value">spcae-between</li>
+                        <li id="space-around" class="justify-con-value">spcae-around</li>
                     </ul>
                 </div>
                 <div class="css-attributes">
@@ -86,9 +80,11 @@
                     <div class="browser-display">
                         <div id="parent-node">
                             <h3>Parent Div</h3>
-                            <div class="child">Child Div</div>
-                            <div class="child">Child Div</div>
-                            <div class="child">Child Div</div>
+                            <div id="child-holder">
+                                <div class="child">Child Div</div>
+                                <div class="child">Child Div</div>
+                                <div class="child">Child Div</div>
+                            </div>
                         </div>
                     </div>
                 </div>

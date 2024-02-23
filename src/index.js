@@ -1,13 +1,14 @@
 import  "./index.scss";
-import { cssAttrDom, cssAttrVal, nodes, sideNavAnimations, toolboxFunc } from "./DOM";
-
-let toolboxClick = false;
+import { cssAttrDom, nodes, sideNavAnimations, toolboxFunc, cssRenderVal } from "./DOM";
 
 toolboxFunc.forgeBtn.addEventListener("click", attributeList);
 cssAttrDom.displayBtn.forEach(displayAttrVals);
-cssAttrVal.displayValues.forEach(displayVal);
+cssRenderVal.displayValues.forEach(renderDisplayCss);
+cssRenderVal.flexDirValues.forEach(renderFlexDirCss);
+cssRenderVal.jusConValues.forEach(renderJusConCss);
 
 function attributeList() {
+    let toolboxClick = false;
     if (!toolboxClick) {
         sideNavAnimations.sideNav.style.width = "240px";
         toolboxFunc.toolbox.style.left = "250px";
@@ -34,8 +35,20 @@ function displayAttrVals(btn) {
     });
 }
 
-function displayVal(btn) {
+function renderDisplayCss(btn) {
     btn.addEventListener("click", (e) => {
-        nodes.parentNode.style.display = e.target.id;
+        nodes.childHolder.style.display = e.target.id;
+    });
+}
+
+function renderFlexDirCss(btn) {
+    btn.addEventListener("click", (e) => {
+        nodes.childHolder.style.flexDirection = e.target.id;
+    });
+}
+
+function renderJusConCss(btn) {
+    btn.addEventListener("click", (e) => {
+        nodes.childHolder.style.justifyContent = e.target.id;
     });
 }
