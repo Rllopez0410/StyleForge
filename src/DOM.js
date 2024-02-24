@@ -7,6 +7,9 @@ export const sideNavAnimations = {
     sideNav: document.getElementById("side-nav"),
     displayVal: document.getElementById("display-values"),
     displayAttr: document.getElementById("display-attribute"),
+    flexDirAttr: document.getElementById("flex-dir-attribute"),
+    jusConAttr: document.getElementById("justify-con-attribute"),
+    alignitemsAttr: document.getElementById("align-items-attribute"),
 }; 
 
 export const nodes = {
@@ -22,4 +25,5 @@ export const cssRenderVal = {
     displayValues: document.querySelectorAll(".display-value"),
     flexDirValues: document.querySelectorAll(".flex-dir-value"),
     jusConValues: document.querySelectorAll(".justify-con-value"),
+    alignItemsValue: document.querySelectorAll(".align-items-value"),
 };

@@ -6,9 +6,12 @@ cssAttrDom.displayBtn.forEach(displayAttrVals);
 cssRenderVal.displayValues.forEach(renderDisplayCss);
 cssRenderVal.flexDirValues.forEach(renderFlexDirCss);
 cssRenderVal.jusConValues.forEach(renderJusConCss);
+cssRenderVal.alignItemsValue.forEach(renderAlignItemsCss);
+
+let toolboxClick = false;
+let cssAttribute = false;
 
 function attributeList() {
-    let toolboxClick = false;
     if (!toolboxClick) {
         sideNavAnimations.sideNav.style.width = "240px";
         toolboxFunc.toolbox.style.left = "250px";
@@ -23,7 +26,6 @@ function attributeList() {
 }
 
 function displayAttrVals(btn) {
-    let cssAttribute = false;
     btn.addEventListener("click", (e) => {
         if (!cssAttribute) {
             cssAttribute = true;
@@ -38,17 +40,35 @@ function displayAttrVals(btn) {
 function renderDisplayCss(btn) {
     btn.addEventListener("click", (e) => {
         nodes.childHolder.style.display = e.target.id;
+        sideNavAnimations.displayAttr.innerHTML = `display: <span>${e.target.id}</span>;`;
+        e.target.parentNode.style.maxHeight= "0";
+        cssAttribute = false;
     });
 }
 
 function renderFlexDirCss(btn) {
     btn.addEventListener("click", (e) => {
         nodes.childHolder.style.flexDirection = e.target.id;
+        sideNavAnimations.flexDirAttr.innerHTML = `flex-direction: <span>${e.target.id}</span>;`;
+        e.target.parentNode.style.maxHeight= "0";
+        cssAttribute = false;
     });
 }
 
 function renderJusConCss(btn) {
     btn.addEventListener("click", (e) => {
         nodes.childHolder.style.justifyContent = e.target.id;
+        sideNavAnimations.jusConAttr.innerHTML = `justify-content: <span>${e.target.id}</span>;`;
+        e.target.parentNode.style.maxHeight= "0";
+        cssAttribute = false;
+    });
+}
+
+function renderAlignItemsCss(btn) {
+    btn.addEventListener("click", (e) => {
+        nodes.childHolder.style.alignItems = e.target.id;
+        sideNavAnimations.alignitemsAttr.innerHTML = `align-items: <span>${e.target.id}</span>;`;
+        e.target.parentNode.style.maxHeight= "0";
+        cssAttribute = false;
     });
 }

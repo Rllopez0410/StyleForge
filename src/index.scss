@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 @mixin displayFlex {
     display: flex;
     justify-content: center;
@@ -129,6 +131,11 @@ body {
             }
             .css-attributes {
                 transition: 0.3s;
+                font-family: "Source Code Pro", monospace;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 18px;
                 z-index: 1;
                 cursor: pointer;
                 .attribute-btns {
@@ -153,6 +160,7 @@ body {
                     background-color: white;
                     color: black;
                 }
+                span {color: orange;}
             }
         }
         .display {
