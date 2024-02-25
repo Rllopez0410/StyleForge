@@ -10,6 +10,8 @@ export const sideNavAnimations = {
     flexDirAttr: document.getElementById("flex-dir-attribute"),
     jusConAttr: document.getElementById("justify-con-attribute"),
     alignitemsAttr: document.getElementById("align-items-attribute"),
+    alignConAttr: document.getElementById("align-con-attribute"),
+    flexWrapAttr: document.getElementById("flex-wrap-attribute"),
 }; 
 
 export const nodes = {
@@ -26,4 +28,6 @@ export const cssRenderVal = {
     flexDirValues: document.querySelectorAll(".flex-dir-value"),
     jusConValues: document.querySelectorAll(".justify-con-value"),
     alignItemsValue: document.querySelectorAll(".align-items-value"),
+    alignConValue: document.querySelectorAll(".align-con-value"),
+    flexWrapValue: document.querySelectorAll(".flex-wrap-value"),
 };

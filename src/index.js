@@ -7,6 +7,8 @@ cssRenderVal.displayValues.forEach(renderDisplayCss);
 cssRenderVal.flexDirValues.forEach(renderFlexDirCss);
 cssRenderVal.jusConValues.forEach(renderJusConCss);
 cssRenderVal.alignItemsValue.forEach(renderAlignItemsCss);
+cssRenderVal.alignConValue.forEach(renderAlignConCss);
+cssRenderVal.flexWrapValue.forEach(renderFlexWrapCss);
 
 let toolboxClick = false;
 let cssAttribute = false;
@@ -68,6 +70,24 @@ function renderAlignItemsCss(btn) {
     btn.addEventListener("click", (e) => {
         nodes.childHolder.style.alignItems = e.target.id;
         sideNavAnimations.alignitemsAttr.innerHTML = `align-items: <span>${e.target.id}</span>;`;
+        e.target.parentNode.style.maxHeight= "0";
+        cssAttribute = false;
+    });
+}
+
+function renderAlignConCss(btn) {
+    btn.addEventListener("click", (e) => {
+        nodes.childHolder.style.alignContent = e.target.id;
+        sideNavAnimations.alignConAttr.innerHTML = `align-content: <span>${e.target.id}</span>;`;
+        e.target.parentNode.style.maxHeight= "0";
+        cssAttribute = false;
+    });
+}
+
+function renderFlexWrapCss(btn) {
+    btn.addEventListener("click", (e) => {
+        nodes.childHolder.style.flexWrap = e.target.id;
+        sideNavAnimations.flexWrapAttr.innerHTML = `flex-wrap: <span>${e.target.id}</span>;`;
         e.target.parentNode.style.maxHeight= "0";
         cssAttribute = false;
     });
