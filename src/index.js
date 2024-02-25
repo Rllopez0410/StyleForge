@@ -5,11 +5,3 @@ import {
     renderAlignConCss, 
     renderFlexWrapCss
 } from "./loops.js";
-
-(function(){
-    renderDisplayCss;
-    renderJusConCss; 
-    renderAlignItemsCss; 
-    renderAlignConCss;
-    renderFlexWrapCss; 
-})();
